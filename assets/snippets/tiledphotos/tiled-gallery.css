@@ -1,26 +1,21 @@
 /* =Tiled Gallery Default Styles
 -------------------------------------------------------------- */
 
-.tiled-gallery {
-	clear: both;
-	margin: 0;
-	overflow: hidden;
-}
-
 .tiled-gallery img {
 	/*margin: 2px !important; /* Ensure that this value isn't overridden by themes that give content images blanket margins */
+	display: block;
 }
 
-.tiled-gallery .gallery-group {
-	float: left;
-	position: relative;
-}
 .tiled-gallery .gallery-group img {
 	width:100%;
 }
 .tiled-gallery .tiled-gallery-item {
-	margin: 0 2px 0 0;
+	/*margin: 0 2px 0 0;*/
 	position: relative;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	width: 100%;
 }
 .tiled-gallery .gallery-row {
 	 overflow: hidden;
@@ -33,36 +28,41 @@
 	padding: 0;
 	text-decoration: none;
 	width: auto;
+	display:block;
 }
 .tiled-gallery .tiled-gallery-item img {
 	background: none;
-	border: none;
 	box-shadow: none;
-	max-width: 100%;
 	padding: 0;
 	vertical-align: middle;
 	display: block;
-	opacity:1;
-	transform: translateZ(0);
-	transition:opacity 0.4s ease;
+	opacity: 0;
 }
-.tiled-gallery img:hover {opacity:.6;}
+/*.tiled-gallery img:hover {opacity:.6;}*/
+.tiled-gallery .gallery-row{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	align-items:stretch
+}
+.tiled-gallery .gallery-group{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+.tiled-gallery .gallery-group.images-2{
+	flex-direction: column;
+}
 
-.tiled-gallery-caption { /* Captions */
-	background: #eee;
-	background: rgba( 255,255,255,0.8 );
-	color: #333;
-	font-size: 13px;
-	font-weight: 400;
-	overflow: hidden;
-	padding: 10px 0;
-	position: absolute;
-	bottom: 0;
-	text-indent: 10px;
-	text-overflow: ellipsis;
-	width: 100%;
-	white-space: nowrap;
+.tiled-gallery .tiled-gallery-item{
+	border: 2px solid #fff;
 }
-.tiled-gallery .tiled-gallery-item-small .tiled-gallery-caption { /* Smaller captions */
-	font-size: 11px;
+
+.tiled-gallery{
+	margin:2px
 }
