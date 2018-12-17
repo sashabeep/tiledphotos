@@ -14,7 +14,7 @@ $rowTpl = isset($rowTpl) ? $DLTemplate->getChunk($rowTpl) : '@CODE: <div class="
 //группа картинок
 $groupTpl = isset($groupTpl) ? $DLTemplate->getChunk($groupTpl) : '@CODE: <div class="gallery-group images-[+count+]" style="width:[+rel.width+]; ">[+wrap+]</div>';
 //картинка в группе
-$itemTpl = isset($itemTpl) ? $DLTemplate->getChunk($itemTpl) : '@CODE: <div class="tiled-gallery-item tiled-gallery-item-[+size+]"><a href="[+link+]" title="[+title+][+num+]"><img src="[+thumb+]" style="margin-bottom:[+margin+]px;" alt="[+title+]" /></a></div>';
+$itemTpl = isset($itemTpl) ? $DLTemplate->getChunk($itemTpl) : '@CODE: <div class="tiled-gallery-item tiled-gallery-item-[+size+]" style="background-image:url([+thumb+])"><a href="[+image+]" title="[+title+]" data-rel="lightcase:photos"><img src="[+thumb+]" style="margin-bottom:[+margin+]px;" alt="[+title+]"></a></div>';
 //коэффициент увеличение превьюшки, хз зачем он был нужен
 $k = isset($k) ? $k : 1;
 //дополнительные опции для превьюшки
